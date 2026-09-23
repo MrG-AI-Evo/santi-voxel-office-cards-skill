@@ -1,0 +1,4 @@
+interface:
+  display_name: "三体方块人职场梗卡"
+  short_description: "先选职场梗，再生成独立白底方块人卡片"
+  default_prompt: "用三体概念为这个职场主题想四个冷面讽刺梗，先让我选文案，再把选中的梗各做成一张白底方块人卡片。"
