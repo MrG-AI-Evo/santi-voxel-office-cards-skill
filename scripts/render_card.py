@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps, PngImagePlugin
 
 WIDTH = 1080
 HEIGHT = 1440
-SCENE_HEIGHT = 648
+SCENE_HEIGHT = 840
 LEFT = 64
 RIGHT = 64
 TEXT_WIDTH = WIDTH - LEFT - RIGHT
@@ -132,10 +132,10 @@ def wrap_text(draw: ImageDraw.ImageDraw, value: str, font: ImageFont.FreeTypeFon
 def layout_copy(draw: ImageDraw.ImageDraw, series: str, card: dict[str, str]):
     for factor in (1.0, 0.96, 0.92, 0.88, 0.84, 0.80, 0.76):
         font_sizes = {
-            "series": round(35 * factor),
-            "title": round(70 * factor),
-            "body": round(43 * factor),
-            "punchline": round(48 * factor),
+            "series": round(40 * factor),
+            "title": round(90 * factor),
+            "body": round(50 * factor),
+            "punchline": round(68 * factor),
         }
         fonts = {
             "series": ImageFont.truetype(str(BOLD_FONT), font_sizes["series"]),
@@ -153,7 +153,7 @@ def layout_copy(draw: ImageDraw.ImageDraw, series: str, card: dict[str, str]):
                (("series", 1), ("title", 2), ("body", 4), ("punchline", 3))):
             continue
         leading = {key: round(font_sizes[key] * 1.30) for key in font_sizes}
-        gap = {"series": 24, "title": 30, "body": 30, "punchline": 0}
+        gap = {"series": 22, "title": 24, "body": 24, "punchline": 0}
         needed = sum(len(lines[key]) * leading[key] + gap[key]
                      for key in ("series", "title", "body", "punchline"))
         if TEXT_TOP + needed <= HEIGHT - BOTTOM_MARGIN:

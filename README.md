@@ -8,11 +8,11 @@ A Codex Skill for brainstorming Chinese *Three-Body*-inspired workplace satire a
 
 1. 输入职场主题，先获得四个角色创意：三体概念、角色标题、简短说明、红色收梗。
 2. 选择并修改文案后，Skill 为每个角色分别生成原创体素办公室场景。
-3. 排版脚本把确认的中文文案写在白底上，分别导出 **1080×1440、不透明、无透明通道的 PNG**。每张卡片都是一个文件，不会拼图。
+3. 排版脚本把确认的中文文案写在白底上，分别导出 **1080×1440、不透明、无透明通道的 PNG**。上方场景约占 58%，下方文字约占 42%；每张卡片都是一个文件，不会拼图。
 
 默认语气是一本正经的冷面讽刺。主题不限于节前工作，也可以是开会、汇报、绩效、带团队等职场情境。系列标题随主题变化。
 
-The image model draws only the scenes. The bundled renderer places approved Chinese copy afterward, keeping typography clear and avoiding image-model text errors.
+The image model draws only the scenes. The bundled renderer places approved Chinese copy afterward, keeping typography clear and avoiding image-model text errors. Each card uses roughly 58% scene and 42% white typography area, matching the revised reference layout.
 
 ## 安装 | Install
 
